@@ -26,6 +26,7 @@ app.get("/results", function(req, res){
       function(error, response, body){
           if(!error && response.statusCode == 200){
               var data = JSON.parse(body);
+              console.log(data['Search'][5]['Poster'])
               res.render("results", {data: data});
           }
   });
