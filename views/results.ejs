@@ -1,18 +1,16 @@
 <%- include("templates/header"); %>
     <h1>Results Page</h1>
 
+    <div class="container"> 
     <% for(var i=0; i < data['Search'].length; i++) {%>
-      <tr>
-        <td>
-          <p> 
-            <img src="<%- data['Search'][i]['Poster']; %>"></img>
-            Movie Name: <%- data['Search'][i]['Title']; %>
-            Released:  <%- data['Search'][i]["Year"]; %>  
-            imdbID:  <%- data['Search'][i]["imdbID"]; %>
-            Type:  <%- data['Search'][i]["Type"]; %>
-          </p>
-        </td>
-      </tr>
+        <div class="movie">
+            <img class="item" src="<%- data['Search'][i]['Poster'] == 'N/A' ? 'NoPicture.png' : data['Search'][i]['Poster']; %>">
+           <p> Movie Name: <%- data['Search'][i]['Title']; %><br>
+               Released:  <%- data['Search'][i]["Year"]; %><br>
+               Type:  <%- data['Search'][i]["Type"]; %></p><br>
+          </img>
+        </div>
    <% } %>
+  </div>
 
 <%- include("templates/footer"); %>
