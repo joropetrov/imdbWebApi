@@ -4,11 +4,13 @@
     <div class="container"> 
     <% for(var i=0; i < data['Search'].length; i++) {%>
         <div class="movie">
+          <center>
             <img class="item" src="<%- data['Search'][i]['Poster'] == 'N/A' ? 'NoPicture.png' : data['Search'][i]['Poster']; %>">
            <p> Movie Name: <%- data['Search'][i]['Title']; %><br>
                Released:  <%- data['Search'][i]["Year"]; %><br>
                Type:  <%- data['Search'][i]["Type"]; %></p><br>
           </img>
+          </center>
         </div>
    <% } %>
   </div>

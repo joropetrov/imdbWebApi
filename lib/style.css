@@ -18,14 +18,15 @@ body {
     padding: 5px;
 }
 .item {
+
     margin: 5px;
     width: 70%;
     height: 70%;
-    align-content: center;
 }
 .movie {
+    
      border: double;
      border-style: groove;
      width: 260px;
-     height: 360px;
+     height: 390px;
 }
