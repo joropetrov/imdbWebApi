@@ -20,11 +20,11 @@ app.get("/", function(request, response){
 });
  //tt3896198&apikey=ab666ed2
 app.get("/results", function(req, res){ 
-  request("https://www.omdbapi.com/?t=33&apikey=ab666ed2", 
+  //http://www.omdbapi.com/?s=inception&apikey=[yourkey]
+  //https://www.omdbapi.com/?t=33&apikey=ab666ed2
+  request("https://www.omdbapi.com/?s=inception&apikey=ab666ed2", 
       function(error, response, body){
-        console.log(error, response , body)
           if(!error && response.statusCode == 200){
-              // res.send(body); < what we had before
               var data = JSON.parse(body);
               res.render("results", {data: data});
           }
