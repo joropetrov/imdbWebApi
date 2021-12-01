@@ -1,4 +1,22 @@
 <%- include("templates/header"); %>
-    <h1>Test Titlee</h1>
-    <p>Demo Text</p>
+<body>
+<center>
+    <h1>Imdb Web Api "omdbapi"</h1>
+    <p>Search Imdb Movies</p>
+    <form action="/" method="POST">
+        <label for="fname">Search By Name:</label><br>
+        <input type="text" id="name" name="name" ><br>
+        <input type="submit" id="name" value="Submit">
+      </form> 
+
+      <form action="/" method="POST">
+        <label for="fname">Search By Year:</label><br>
+        <input type="number" id="year" name="year" ><br>
+        <input type="submit" value="Submit">
+      </form> 
+      
+    
+</center>
+
+</body>
 <%- include("templates/footer"); %>
